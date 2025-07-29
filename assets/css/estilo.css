@@ -81,7 +81,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #2563eb;
+    color: #557d9f;
 }
 
 .nav-link::after {
@@ -91,7 +91,7 @@ body {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: #2563eb;
+    background-color: #557d9f;
     transition: width 0.3s ease;
 }
 
@@ -116,7 +116,7 @@ body {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #557d9f 0%, #0c1e5a 100%);
     display: flex;
     align-items: center;
     position: relative;
@@ -168,7 +168,7 @@ body {
     align-items: center;
     gap: 10px;
     background: #fff;
-    color: #2563eb;
+    color: #0c1e5a;
     padding: 1rem 2rem;
     border-radius: 50px;
     text-decoration: none;
@@ -246,7 +246,7 @@ body {
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1e293b;
+    color: #0c1e5a;
     margin-bottom: 2rem;
     position: relative;
 }
@@ -256,7 +256,7 @@ body {
     position: absolute;
     width: 60px;
     height: 4px;
-    background: #2563eb;
+    background: #7cb3c5;
     bottom: -10px;
     left: 0;
 }
@@ -281,7 +281,7 @@ body {
     display: block;
     font-size: 2rem;
     font-weight: 700;
-    color: #2563eb;
+    color: #557d9f;
 }
 
 .stat-label {
@@ -327,7 +327,7 @@ body {
 .service-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #557d9f 0%, #0c1e5a 100%);
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -439,7 +439,7 @@ body {
 
 .contact-item i {
     width: 20px;
-    color: #2563eb;
+    color: #557d9f;
 }
 
 .contact-form {
@@ -486,7 +486,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #557d9f 0%, #0c1e5a 100%);
     color: white;
     padding: 1rem 2rem;
     border: none;
