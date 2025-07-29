@@ -1,11 +1,310 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FuturaTech - Desenvolvendo o Futuro</title>
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="logo.jpg" alt="FuturaTech Logo" class="logo-img">
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#team" class="nav-link">Equipe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contato</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">FuturaTech</h1>
+                <h2 class="hero-subtitle">Desenvolvendo o Futuro</h2>
+                <p class="hero-description">Soluções tecnológicas inovadoras para impulsionar seu negócio</p>
+                <a href="#services" class="cta-button">
+                    <span>Conheça nossos serviços</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <div class="floating-element element-1"></div>
+                    <div class="floating-element element-2"></div>
+                    <div class="floating-element element-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Sobre a FuturaTech</h2>
+                    <p class="about-description">
+                        Somos uma empresa especializada no desenvolvimento de sistemas personalizados, 
+                        com foco em inovação e qualidade. Nossa equipe experiente trabalha com as mais 
+                        modernas tecnologias para entregar soluções que transformam negócios.
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Anos de Experiência</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">Projetos Concluídos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Clientes Satisfeitos</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="about_us.jpg" alt="Equipe FuturaTech" class="about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="service-title">Desenvolvimento Web</h3>
+                    <p class="service-description">
+                        Criamos sites e aplicações web modernas, responsivas e otimizadas para performance.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="service-title">Aplicativos Mobile</h3>
+                    <p class="service-description">
+                        Desenvolvemos apps nativos e híbridos para iOS e Android com excelente UX.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="service-title">Sistemas ERP</h3>
+                    <p class="service-description">
+                        Soluções completas de gestão empresarial personalizadas para seu negócio.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="service-title">E-commerce</h3>
+                    <p class="service-description">
+                        Lojas virtuais completas com integração de pagamentos e gestão de estoque.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="service-title">Consultoria Tech</h3>
+                    <p class="service-description">
+                        Orientação estratégica em tecnologia para otimizar seus processos.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="service-title">Suporte Técnico</h3>
+                    <p class="service-description">
+                        Manutenção e suporte 24/7 para garantir o funcionamento perfeito.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title">Nossa Equipe</h2>
+            <div class="team-content">
+                <div class="strengths">
+                    <h3 class="subsection-title">Nossos Pontos Fortes</h3>
+                    <div class="strengths-list">
+                        <div class="strength-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Experiência de mais de 10 anos no mercado</span>
+                        </div>
+                        <div class="strength-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Equipe multidisciplinar e especializada</span>
+                        </div>
+                        <div class="strength-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Metodologias ágeis de desenvolvimento</span>
+                        </div>
+                        <div class="strength-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Suporte técnico 24/7</span>
+                        </div>
+                        <div class="strength-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Foco na satisfação do cliente</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="improvements">
+                    <h3 class="subsection-title">Pontos de Melhoria</h3>
+                    <div class="improvements-list">
+                        <div class="improvement-item">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>Ainda expandindo para mercados internacionais</span>
+                        </div>
+                        <div class="improvement-item">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>Crescimento rápido da equipe em treinamento</span>
+                        </div>
+                        <div class="improvement-item">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>Algumas tecnologias emergentes em fase de estudo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Vamos conversar sobre seu projeto</h3>
+                    <p>Estamos prontos para transformar suas ideias em realidade. Entre em contato conosco!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contato@futuratech.com.br</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(11) 9999-9999</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>São Paulo, SP - Brasil</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Empresa</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        <span>Enviar Mensagem</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.jpg" alt="FuturaTech Logo" class="logo-img">
+                    <span class="logo-text">FuturaTech</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Início</a>
+                    <a href="#about">Sobre Nós</a>
+                    <a href="#services">Serviços</a>
+                    <a href="#team">Equipe</a>
+                    <a href="#contact">Contato</a>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FuturaTech. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
