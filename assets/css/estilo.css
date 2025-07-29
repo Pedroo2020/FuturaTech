@@ -136,6 +136,7 @@ body {
 .hero-content {
     color: white;
     z-index: 2;
+    padding-top: 155px
 }
 
 .hero-title {
