@@ -1,4 +1,4 @@
-// Mobile Menu Toggle
+// Alternar o menu mobile
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -7,13 +7,13 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-// Close mobile menu when clicking on a link
+// Fechar o menu mobile ao clicar em um link
 document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
 }));
 
-// Smooth scrolling for navigation links
+// Rolagem suave para links de navegação
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -27,7 +27,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Header background on scroll
+// Alterar o fundo do cabeçalho ao rolar a página
 window.addEventListener('scroll', () => {
     const header = document.querySelector('.header');
     if (window.scrollY > 100) {
@@ -39,7 +39,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Animate elements on scroll
+// Animar elementos ao rolar a página
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -54,7 +54,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe elements for animation
+// Observar elementos para animação
 document.addEventListener('DOMContentLoaded', () => {
     const animateElements = document.querySelectorAll('.service-card, .strength-item, .improvement-item, .stat-item');
     
@@ -66,35 +66,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Form submission (fictitious)
+// Envio de formulário (fictício)
 const contactForm = document.querySelector('.contact-form');
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
-    // Get form data
+
+    // Obter os dados do formulário
     const formData = new FormData(contactForm);
     const name = formData.get('name');
     const email = formData.get('email');
     const phone = formData.get('phone');
     const company = formData.get('company');
     const message = formData.get('message');
-    
-    // Simulate form submission
+
+    // Simular envio do formulário
     const submitButton = contactForm.querySelector('.submit-button');
     const originalText = submitButton.innerHTML;
-    
+
     submitButton.innerHTML = '<span>Enviando...</span><i class="fas fa-spinner fa-spin"></i>';
     submitButton.disabled = true;
-    
+
     setTimeout(() => {
-        alert(`Obrigado, ${name}! Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.`);
+        // Mostrar SweetAlert2 ao invés de alert
+        Swal.fire({
+            title: `Obrigado, ${name}!`,
+            text: 'Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.',
+            icon: 'success',
+            confirmButtonText: 'Fechar',
+            confirmButtonColor: '#3085d6'
+        });
+
         contactForm.reset();
         submitButton.innerHTML = originalText;
         submitButton.disabled = false;
     }, 2000);
 });
 
-// Add typing effect to hero title
+// Adicionar efeito de digitação no título principal (hero)
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.innerHTML = '';
@@ -110,14 +118,14 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-// Initialize typing effect when page loads
+// Iniciar o efeito de digitação ao carregar a página
 window.addEventListener('load', () => {
     const heroTitle = document.querySelector('.hero-title');
     const originalText = heroTitle.textContent;
     typeWriter(heroTitle, originalText, 150);
 });
 
-// Add parallax effect to hero section
+// Adicionar efeito parallax à seção principal (hero)
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
@@ -128,7 +136,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Counter animation for stats
+// Animação de contador para estatísticas
 function animateCounter(element, target, duration = 2000) {
     let start = 0;
     const increment = target / (duration / 16);
@@ -146,7 +154,7 @@ function animateCounter(element, target, duration = 2000) {
     updateCounter();
 }
 
-// Trigger counter animation when stats section is visible
+// Iniciar a animação do contador quando a seção estiver visível
 const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -167,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Add hover effect to service cards
+// Adicionar efeito de hover aos cards de serviço
 document.addEventListener('DOMContentLoaded', () => {
     const serviceCards = document.querySelectorAll('.service-card');
     
@@ -182,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Add loading animation
+// Adicionar animação de carregamento
 window.addEventListener('load', () => {
     document.body.style.opacity = '0';
     document.body.style.transition = 'opacity 0.5s ease';
@@ -191,4 +199,3 @@ window.addEventListener('load', () => {
         document.body.style.opacity = '1';
     }, 100);
 });
-
