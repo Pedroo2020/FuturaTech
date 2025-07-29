@@ -701,3 +701,9 @@ body {
     }
 }
 
+@media (max-width: 370px) {
+    .about, .services, .team, .contact {
+        padding: 5rem 0rem;
+    }
+}
+
