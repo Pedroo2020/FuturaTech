@@ -65,6 +65,23 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 });
+// Máscara ao digitar no campo de telefone
+const phoneInput = document.querySelector('#phone');
+phoneInput.addEventListener('input', function (e) {
+    let value = e.target.value.replace(/\D/g, '');
+
+    if (value.length > 11) value = value.slice(0, 11);
+
+    if (value.length <= 10) {
+        // Formato fixo/celular antigo: (99) 9999-9999
+        value = value.replace(/^(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+    } else {
+        // Formato celular novo: (99) 99999-9999
+        value = value.replace(/^(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+    }
+
+    e.target.value = value;
+});
 
 // Envio de formulário (fictício)
 const contactForm = document.querySelector('.contact-form');
@@ -76,8 +93,25 @@ contactForm.addEventListener('submit', (e) => {
     const name = formData.get('name');
     const email = formData.get('email');
     const phone = formData.get('phone');
-    const company = formData.get('company');
+    const city = formData.get('city');
     const message = formData.get('message');
+
+    // Validação do telefone (celular brasileiro com DDD)
+    const telefoneValido = (numero) => {
+        const apenasNumeros = numero.replace(/\D/g, '');
+        return /^\d{11}$/.test(apenasNumeros); // 11 dígitos obrigatórios
+    };
+
+    if (phone && !telefoneValido(phone)) {
+        Swal.fire({
+            title: 'Telefone inválido!',
+            text: 'Insira um número válido com DDD, como (11) 91234-5678.',
+            icon: 'error',
+            confirmButtonText: 'Corrigir',
+            confirmButtonColor: '#d33'
+        });
+        return;
+    }
 
     // Simular envio do formulário
     const submitButton = contactForm.querySelector('.submit-button');
@@ -87,7 +121,6 @@ contactForm.addEventListener('submit', (e) => {
     submitButton.disabled = true;
 
     setTimeout(() => {
-        // Mostrar SweetAlert2 ao invés de alert
         Swal.fire({
             title: `Obrigado, ${name}!`,
             text: 'Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.',
